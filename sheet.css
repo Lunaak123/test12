@@ -1,49 +1,73 @@
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #e3f2fd; /* Light Blue background */
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
 }
 
 .container {
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 20px auto;
     padding: 20px;
-}
-
-.operations-panel {
-    background-color: #e3f2fd;
-    padding: 20px;
-    border-bottom: 2px solid #1565c0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.operations-panel h1 {
-    color: #1565c0;
-}
-
-.operations-panel label,
-.operations-panel input,
-.operations-panel select,
-.operations-panel button {
-    margin-right: 15px;
-    font-size: 16px;
-}
-
-#sheet-content {
-    margin-top: 140px; /* To create space below the operations panel */
-    background-color: white;
-    padding: 20px;
-    overflow-x: auto;
+    background-color: #fff; /* White background */
     border-radius: 10px;
-    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-/* Excel Table Style */
+h1 {
+    text-align: center;
+    color: #1565c0; /* Dark blue color */
+}
+
+.operations {
+    position: sticky;
+    top: 0; /* Fixes the operations panel to the top */
+    background-color: #ffffff; /* White background for the panel */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensures it stays on top of the sheet content */
+}
+
+.operations label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #1565c0; /* Dark blue border */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1565c0; /* Dark blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0d47a1; /* Darker blue on hover */
+}
+
+.sheet-content {
+    margin-top: 20px;
+    overflow-x: auto;
+    background-color: #ffffff; /* White background for content */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Light border */
+}
+
+/* Styles to mimic Excel sheet look */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -51,15 +75,15 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #999;
+    border: 1px solid #999; /* Light gray borders to look like Excel cells */
     text-align: left;
     padding: 8px;
 }
 
 th {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Light gray background for header row */
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Light alternate row coloring */
 }
