@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Sheet Data</title>
+    <link rel="stylesheet" href="sheet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="operations">
+            <h1>Operations Panel</h1>
+            <div>
+                <label for="primary-column">Enter Primary Column (e.g., A):</label>
+                <input type="text" id="primary-column" placeholder="A" />
+            </div>
+            <div>
+                <label for="operation-columns">Enter Columns for Operation (e.g., A,B,C):</label>
+                <input type="text" id="operation-columns" placeholder="A,B" />
+            </div>
+            <div>
+                <label for="operation-type">Choose Operation:</label>
+                <select id="operation-type">
+                    <option value="and">AND</option>
+                    <option value="or">OR</option>
+                </select>
+            </div>
+            <button id="apply-operation">Apply Operation</button>
+        </div>
+        <div id="sheet-content" class="sheet-content"></div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+        <script src="sheet.js"></script>
+    </div>
+</body>
+</html>

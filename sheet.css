@@ -1,0 +1,65 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.operations-panel {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-bottom: 2px solid #1565c0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.operations-panel h1 {
+    color: #1565c0;
+}
+
+.operations-panel label,
+.operations-panel input,
+.operations-panel select,
+.operations-panel button {
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+#sheet-content {
+    margin-top: 140px; /* To create space below the operations panel */
+    background-color: white;
+    padding: 20px;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Excel Table Style */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+}
+
+table, th, td {
+    border: 1px solid #999;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
